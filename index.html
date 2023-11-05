@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Список команд</title>
+ <style>
+  body {
+   background-color: black;
+   color: white;
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   margin: 0;
+   padding: 0;
+  }
+
+  h1 {
+   font-size: 24px;
+   margin: 0;
+   padding: 20px;
+   text-align: center;
+  }
+
+  .card {
+   background-color: #333;
+   border-radius: 25px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   margin: 20px auto;
+   max-width: 600px;
+   padding: 20px;
+  }
+
+  .card h2 {
+   font-size: 20px;
+   margin: 0;
+   padding: 0;
+  }
+
+  .card p {
+   margin: 10px 0;
+   padding: 0;
+  }
+
+  .menu {
+   background-color: #222;
+   border-radius: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   display: flex;
+   justify-content: space-between;
+   margin: 30px auto;
+   max-width: 600px;
+   padding: 25px;
+  }
+
+  .menu button {
+   background-color: transparent;
+   border: none;
+   color: white;
+   cursor: pointer;
+   font-size: 10px;
+   margin: 0;
+   padding: 0;
+  }
+
+  .menu button:hover {
+   color: #ccc;
+  }
+ </style>
+</head>
+<body>
+ <div class="menu">
+  <button>ПОДКЛЮЧЕНИЕ</button>
+  <button>ПОМОЩЬ</button>
+ </div>
+ <h1>« Список команд » </h1>
+ <div class="card">
+  <h2>Проверка соединения / Пинг</h2>
+  <p>{prefix} ping</p>
+  <p>Аргументы для команды: —</p>
+  <p>Описание команды: Замеряет время выполнения команды.</p>
+ </div>
+ <div class="card">
+  <h2> Ваши настройки</h2>
+  <p>.eclipse</p>
+  <p>Аргументы для команды: —</p>
+  <p>Описание команды: возвращает ваши текущие настройки, не нуждается в префиксе.</p>
+ </div>
+ <div class="card">
+  <h2>Название команды</h2>
+  <p>Как применять команду</p>
+  <p>Аргументы для команды</p>
+  <p>Описание команды</p>
+ </div>
+</body>
+</html>
