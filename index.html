@@ -1,3 +1,5 @@
+Код для создания сайта с описанными вами элементами:
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,83 +14,101 @@
    margin: 0;
    padding: 0;
   }
-
-  h1 {
-   font-size: 24px;
-   margin: 0;
-   padding: 20px;
-   text-align: center;
-  }
-
   .card {
-   background-color: #333;
-   border-radius: 25px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-   margin: 20px auto;
-   max-width: 600px;
-   padding: 20px;
-  }
-
-  .card h2 {
-   font-size: 20px;
-   margin: 0;
-   padding: 0;
-  }
-
-  .card p {
-   margin: 10px 0;
-   padding: 0;
-  }
-
-  .menu {
    background-color: #222;
-   border-radius: 20px;
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+   margin-bottom: 20px;
+   overflow: hidden;
+   padding: 20px;
+   transition: all 0.3s ease;
+  }
+  .card:hover {
+   transform: scale(1.05);
+  }
+  .card h2 {
+   margin-top: 0;
+  }
+  .card p {
+   display: none;
+  }
+  .card .toggle {
+   cursor: pointer;
+   font-weight: bold;
+   margin-top: 10px;
+   text-decoration: underline;
+  }
+  .card .toggle:hover {
+   color: #ccc;
+  }
+  .menu {
+   background-color: #333;
+   border-radius: 10px;
    display: flex;
    justify-content: space-between;
-   margin: 30px auto;
-   max-width: 600px;
-   padding: 25px;
+   padding: 10px 20px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 1;
   }
-
   .menu button {
    background-color: transparent;
    border: none;
    color: white;
    cursor: pointer;
-   font-size: 10px;
-   margin: 0;
-   padding: 0;
+   font-size: 16px;
+   font-weight: bold;
+   padding: 10px;
+   text-transform: uppercase;
+   transition: all 0.3s ease;
   }
-
   .menu button:hover {
    color: #ccc;
   }
  </style>
+ <script>
+  function toggleCard(card) {
+   var content = card.querySelector('p');
+   var toggle = card.querySelector('.toggle');
+   if (content.style.display === 'none') {
+    content.style.display = 'block';
+    toggle.textContent = 'Скрыть';
+   } else {
+    content.style.display = 'none';
+    toggle.textContent = 'Развернуть';
+   }
+  }
+ </script>
 </head>
 <body>
  <div class="menu">
-  <button>ПОДКЛЮЧЕНИЕ</button>
-  <button>ПОМОЩЬ</button>
- </div>
- <h1>« Список команд » </h1>
- <div class="card">
-  <h2>Проверка соединения / Пинг</h2>
-  <p>{prefix} ping</p>
-  <p>Аргументы для команды: —</p>
-  <p>Описание команды: Замеряет время выполнения команды.</p>
+  <button>Подключение</button>
+  <button>Помощь</button>
  </div>
  <div class="card">
-  <h2> Ваши настройки</h2>
-  <p>.eclipse</p>
-  <p>Аргументы для команды: —</p>
-  <p>Описание команды: возвращает ваши текущие настройки, не нуждается в префиксе.</p>
+  <h2></h2>
+  <p><strong>Как применять команду:</strong> Описание применения команды.</p>
+  <p><strong>Аргументы для команды:</strong> Описание аргументов команды.</p>
+  <p><strong>Описание команды:</strong> Подробное описание команды.</p>
+  <div class="toggle" onclick="toggleCard(this.parentNode)">Развернуть</div>
  </div>
  <div class="card">
-  <h2>Название команды</h2>
-  <p>Как применять команду</p>
-  <p>Аргументы для команды</p>
-  <p>Описание команды</p>
+  <h2>Команда 2</h2>
+  <p><strong>Как применять команду:</strong> Описание применения команды.</p>
+  <p><strong>Аргументы для команды:</strong> Описание аргументов команды.</p>
+  <p><strong>Описание команды:</strong> Подробное описание команды.</p>
+  <div class="toggle" onclick="toggleCard(this.parentNode)">Развернуть</div>
+ </div>
+ <div class="card">
+  <h2>Команда 3</h2>
+  <p><strong>Как применять команду:</strong> Описание применения команды.</p>
+  <p><strong>Аргументы для команды:</strong> Описание аргументов команды.</p>
+  <p><strong>Описание команды:</strong> Подробное описание команды.</p>
+  <div class="toggle" onclick="toggleCard(this.parentNode)">Развернуть</div>
  </div>
 </body>
 </html>
+
+
+Вы можете изменить текст и стили элементов по своему усмотрению.
